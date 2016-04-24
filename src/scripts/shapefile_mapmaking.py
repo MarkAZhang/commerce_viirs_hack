@@ -7,6 +7,7 @@
 
 import json
 import folium
+from folium.utilities import split_six
 import shapefile
 
 ######################
@@ -94,6 +95,7 @@ def mk_map_w_data(in_json_fname, in_data, json_key, out_map_name, color, loc, zo
     mapfile = folium.Map(location = loc, zoom_start = zoom)
     mapfile.choropleth(geo_path = in_json_fname, data = in_data, 
             columns = in_data.columns, key_on = json_key, fill_color = color,
-            fill_opacity = 0.9, line_opacity = 0.2, legend_name = 'Randomized')
+            fill_opacity = 0.9, line_opacity = 0.2, legend_name = 'Randomized',
+            threshold_scale = split_six(in_data.iloc[:,1]))
     mapfile.save(out_map_name)
     print out_map_name
