@@ -2,7 +2,7 @@ const path = require('path')
 const DEST = path.resolve(__dirname, 'dist')
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: ["babel-polyfill", "./src/index.js"],
     output: {
         path: DEST,
         filename: "bundle.js"

@@ -10,6 +10,7 @@ app.get('/', function(req, res) {
   res.sendFile(INDEX_PAGE)
 })
 app.use(express.static('dist'))
+app.use(express.static('data'))
 
 const PORT = settings.PORT
 const HOSTNAME = settings.HOSTNAME
