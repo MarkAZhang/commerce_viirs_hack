@@ -51,7 +51,7 @@ The results of our analysis are displayed in a webapp (only locally-hosted
 for now) that allows side-by-side comparison of the covariates, response
 variables, and predictions.
 
-![alt text](https://github.com/tliu30/commerce_viirs_hack/)
+![alt text](https://github.com/tliu30/commerce_viirs_hack/blob/tony-version/img/bayeshack.jpg?raw=true "Screenshot")
 
 A quick side-by-side examination of light intensity and building permit counts
 reveals that in neither Chicago nor New York City is there a strong correlation
