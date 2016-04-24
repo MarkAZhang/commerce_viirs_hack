@@ -1,9 +1,12 @@
-import {last, get, map, reverse, flow} from 'lodash/fp'
+import Main from './components/Main'
+import {render} from 'react-dom'
+import './style.css'
+
+/* import {last, get, map, reverse, flow} from 'lodash/fp'
 import {map as leafletMap, polygon, tileLayer, latLng, latLngBounds, CRS, geoJson} from 'leaflet'
 
 import {fetchJson} from './api'
 import {addPolygon} from './utils'
-import './style.css'
 
 /* const southWest = latLng(-90, -180)
 const northEast = latLng(90, 180)
@@ -41,5 +44,11 @@ fetchJson('just_manhattan.json').then(json => {
 })
 */
 
-document.getElementById('mapOne').src = 'test_nums.html'
-document.getElementById('mapTwo').src = 'test_nums.html'
+/* document.getElementById('mapOne').src = 'test_nums.html'
+document.getElementById('mapTwo').src = 'test_nums.html' */
+
+const rootElement = document.getElementById('content')
+window.console.log(content)
+
+// Render it
+render(<Main />, rootElement)
