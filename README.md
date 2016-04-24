@@ -2,9 +2,9 @@ BayesHack 2016 #commerce-viirs
 ======================
 
 ## Using Satellite Imagery to Estimate Construction Activity
-[In]accesibility of data can be a major challenge.
-Metrics of city activity and vitality useful for
-furthering our understanding of effective policy and urban planning are often
+[In]accesibility of data can be a major obstacle to urban study.
+Metrics useful for
+understanding effective policy and urban planning are often
 unavailable. However, there are some measurements that are easy to take
 universally, and, with some statistical estimation, could provide a way to
 reconstruct the desired metrics.
