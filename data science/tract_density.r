@@ -7,19 +7,20 @@ zipcode_FILE <- "/Volumes/FLASHMEM/BayesHack2016/zipcode.txt"
 #https://www.census.gov/geo/maps-data/data/relationship.html
 #########
 
-tracts <- zipcode %>% group_by(TRACT) %>% 
-  select(TRACT, TRPOP, TRAREALAND) %>%
-  summarize(pop = mean(TRPOP), land = mean(TRAREALAND))
-
-tracts <- zipcode %>% group_by(TRACT) %>% 
-  summarize(pop = sum(ZPOP), area = sum(ZAREALAND)) %>%
-  select(TRACT, pop, area) %>%
+geoids <- zipcode %>% group_by(GEOID) %>% 
+  summarize(pop = mean(TRPOP), area = mean(TRAREALAND)) %>%
+  select(GEOID, pop, area) %>%
   mutate(density = pop / area)
 
-#output the population desnsity of a tract
-tract_to_density <- function(index, tract_data = tracts) {
-  return(tract_data$density[tract_data$TRACT == index])
+#output the population desnsity of a geo_id
+geoid_to_density <- function(index, geoids_data = geoids) {
+  return(geoids_data$density[geoids_data$GEOID == index])
 }
 
-tract_to_density(100) == tracts[1, 4]
+head(geoids)
+geoid_to_density(1001020100)
 
+#### TONY:
+# you can join the 'geoids' file to your file to get the 
+# population density at each id
+# e.g:  left_join(YOURFILE, geoids, by = c("colname" = "GEOID"))
