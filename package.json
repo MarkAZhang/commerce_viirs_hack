@@ -20,6 +20,7 @@
   "homepage": "https://github.com/MarkAZhang/commerce_viirs_hack#readme",
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
+    "leaflet": "^0.7.7",
     "lodash": "4.11.1",
     "shpjs": "^3.3.2"
   },

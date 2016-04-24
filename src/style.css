@@ -1,4 +1,20 @@
+html, body, .content {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   font-family: 'proxima-nova', 'Proxima Nova', 'Helvetica Neue';
   font-size: 50px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mapOne {
+  height: 500px;
+  width: 500px;
 }
