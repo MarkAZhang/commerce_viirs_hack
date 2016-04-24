@@ -24,6 +24,7 @@
     "lodash": "4.11.1",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
+    "react-fontawesome": "^0.3.3",
     "recompose": "^0.17.0",
     "shpjs": "^3.3.2"
   },

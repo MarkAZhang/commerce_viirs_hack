@@ -6,7 +6,7 @@ html, body, #content {
 
 body {
   font-family: 'proxima-nova', 'Proxima Nova', 'Helvetica Neue';
-  font-size: 50px;
+  font-size: 16px;
 }
 
 #content {
@@ -41,9 +41,54 @@ body {
   width: 500px;
 }
 
+.iframeContainer {
+  background-color: #eee;
+}
+
 .select {
-  font-size: 100px;
-  height: 100px;
-  margin-bottom: 30px;
-  width: 200px;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  line-height: 40px;
+  height: 40px;
+  position: relative;
+  width: 500px;
+}
+
+.selectButton {
+  background-color: #374040;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.selectButton:hover {
+  background-color: #566565;
+}
+
+.dropdown {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.24);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+}
+
+.option {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: #374040;
+  padding: 0 20px;
+}
+
+.option:hover {
+  background-color: #eee;
+}
+
+.label {
+  flex-grow: 1;
+  margin-left: 10px;
 }

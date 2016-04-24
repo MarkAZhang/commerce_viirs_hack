@@ -1,7 +1,9 @@
 import {PropTypes} from 'react'
 
 const Map = props =>
-  <iframe className='iframe' src={props.src} frameBorder="0"></iframe>
+  <div className="iframeContainer">
+    <iframe className='iframe' src={props.src} frameBorder="0"></iframe>
+  </div>
 
 Map.propTypes = {
   src: PropTypes.string.isRequired,

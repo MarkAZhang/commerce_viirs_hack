@@ -1,7 +1,7 @@
 import {Component, PropTypes} from 'react'
 import {withState} from 'recompose'
-import Dropdown from './Dropdown'
 import Map from './Map'
+import Select from './Select'
 
 class MapContainer extends Component {
   static propTypes = {
@@ -12,7 +12,7 @@ class MapContainer extends Component {
   render() {
     return (
       <div className="map-container">
-        <Dropdown val={this.props.src} onChange={this.props.setSrc} />
+        <Select val={this.props.src} onChange={this.props.setSrc} />
         <Map src={this.props.src} />
       </div>
     )
