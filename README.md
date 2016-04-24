@@ -2,7 +2,7 @@ BayesHack 2016 #commerce-viirs
 ======================
 
 ## Using Satellite Imagery to Estimate Construction Activity
-[In]accesibility of data can be a major obstacle to urban study, as metrics
+The [in]accesibility of data can be a major obstacle to urban study, as metrics
 useful for understanding the effects of policy and urban planning are often
 unavailable. However, there are some measurements that are easy to take
 universally, and, with some statistical estimation, could provide a way to
@@ -10,9 +10,9 @@ reconstruct the desired metrics.
 
 In this project, we attempt to use the Department of Commerce's
 satellite-collected images of nighttime light levels across the United States
-of America to estimate the number of new construction / demolition permits in
-specific cities as a proof-of-concept study. We conduct this study on the
-cities of New York City (all five boroughs) and Chicago.
+of America to estimate the number of new construction permits in as a
+proof-of-concept study of how missing data points like these could be filled
+in. We conduct this study on the cities of New York City and Chicago.
 
 ### Data Sources
 The following datasets were used in this project:
