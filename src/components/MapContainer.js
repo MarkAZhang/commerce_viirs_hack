@@ -20,5 +20,5 @@ class MapContainer extends Component {
 }
 
 export default withState(
-  'src', 'setSrc', 'test_nums.html'
+  'src', 'setSrc', 'chi_build.html'
 )(MapContainer)
