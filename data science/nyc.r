@@ -52,7 +52,7 @@ summary(zipcode$TRACT)
 
 output <- nyc2 %>% select(Zip.Code, date) %>%
   left_join(zipcode, by = c("Zip.Code" = "ZCTA5")) %>% 
-  select(TRACT, date) 
+  select(GEOID, date) 
 head(output)
 
 write.csv(output, output_FILE)
