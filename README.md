@@ -1,4 +1,4 @@
-BayesHack 2016 #commerce-viirs
+BayesHack 2016 #doc #viirs
 ======================
 
 ## Using Satellite Imagery to Estimate Construction Activity
@@ -78,10 +78,8 @@ continue to explore the intersections of data science and the social good.
 A big thank you to BayesImpact and all the sponsors of BayesHack 2016!
 
 ### Members
-Chris Stock
 
-Stephen Bates
-
-Mark Zhang
-
-Anthony Liu
+Our team was made up of Chris Stock,
+Stephen Bates,
+Mark Zhang, and
+Anthony Liu.
