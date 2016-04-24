@@ -45,6 +45,11 @@ body {
   background-color: #eee;
 }
 
+.icon {
+  text-align: center;
+  width: 25px;
+}
+
 .select {
   border-radius: 5px;
   color: white;
