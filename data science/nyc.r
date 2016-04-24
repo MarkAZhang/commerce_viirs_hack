@@ -50,11 +50,9 @@ summary(nyc2$Permit.Subtype)
 zipcode <- read.csv(zipcode_FILE)
 summary(zipcode$TRACT)
 
-zipcode %<>% mutate(density = ZPOP / ZAREALAND)
-
 output <- nyc2 %>% select(Zip.Code, date) %>%
   left_join(zipcode, by = c("Zip.Code" = "ZCTA5")) %>% 
-  select(TRACT, date) 
+  select(GEOID, date) 
 head(output)
 
 write.csv(output, output_FILE)
