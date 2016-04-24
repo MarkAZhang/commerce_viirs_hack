@@ -5,20 +5,27 @@ import Select from './Select'
 
 class MapContainer extends Component {
   static propTypes = {
-    src: PropTypes.string.isRequired,
-    setSrc: PropTypes.func.isRequired,
+    initialSrc: PropTypes.string,
+  }
+
+  state = {
+    src: ''
+  }
+
+  componentWillMount() {
+    if (this.props.initialSrc) {
+      this.setState({src: this.props.initialSrc})
+    }
   }
 
   render() {
     return (
       <div className="mapContainer">
-        <Select val={this.props.src} onChange={this.props.setSrc} />
-        <Map src={this.props.src} />
+        <Select val={this.state.src} onChange={val => this.setState({src: val})} />
+        <Map src={this.state.src} />
       </div>
     )
   }
 }
 
-export default withState(
-  'src', 'setSrc', 'chi_build.html'
-)(MapContainer)
+export default MapContainer
