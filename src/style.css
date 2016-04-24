@@ -1,6 +1,7 @@
 html, body, .content {
   height: 100%;
   width: 100%;
+  margin: 0;
 }
 
 body {
@@ -9,12 +10,40 @@ body {
 }
 
 .content {
+  background-color: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#mapOne {
+.container {
+  background-color: #fff;
+  height: 700px;
+  width: 1300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.map-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.map-container:not(:last-child) {
+  margin-right: 100px;
+}
+
+.iframe {
   height: 500px;
   width: 500px;
+}
+
+.select {
+  font-size: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+  width: 200px;
 }

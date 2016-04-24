@@ -1,7 +1,7 @@
 const assign = require('lodash/fp/assign')
 
 const settings = assign({
-  PORT: 3000,
+  PORT: 3333,
   HOSTNAME: 'localhost',
 }, process.env)
 

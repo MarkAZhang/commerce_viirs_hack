@@ -12,6 +12,7 @@ app.get('/', function(req, res) {
 app.use(express.static('dist'))
 app.use(express.static('data'))
 app.use(express.static('node_modules/leaflet/dist/'))
+app.use('assets', express.static('assets'))
 
 const PORT = settings.PORT
 const HOSTNAME = settings.HOSTNAME

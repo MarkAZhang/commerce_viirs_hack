@@ -1,14 +1,15 @@
-import {last} from 'lodash/fp'
-import {map, tileLayer, latLng, latLngBounds, CRS, geoJson} from 'leaflet'
+import {last, get, map, reverse, flow} from 'lodash/fp'
+import {map as leafletMap, polygon, tileLayer, latLng, latLngBounds, CRS, geoJson} from 'leaflet'
 
 import {fetchJson} from './api'
+import {addPolygon} from './utils'
 import './style.css'
 
-const southWest = latLng(-90, -180)
+/* const southWest = latLng(-90, -180)
 const northEast = latLng(90, 180)
 const bounds = latLngBounds(southWest, northEast)
 
-const mapOne = map('mapOne', {
+const mapOne = leafletMap('mapOne', {
   center:[40.72, -74],
   zoom: 9,
   maxBounds: bounds,
@@ -27,6 +28,18 @@ const tileLayerOne = tileLayer(
 ).addTo(mapOne);
 
 fetchJson('just_manhattan.json').then(json => {
-  const geoJsonOne = geoJson(json).addTo(mapOne)
-  geoJsonOne.setStyle(feature => feature.properties.style)
+  const polygonsOne = map(
+    get(['geometry', 'coordinates', 0]),
+  get(['features'], json))
+  const polygons = map(flow(
+    get(['geometry', 'coordinates', 0]),
+    map(reverse)
+  ), get(['features'], json))
+  map(polygon => addPolygon(polygon, mapOne), polygons)
+  // const geoJsonOne = geoJson(json).addTo(mapOne)
+  // geoJsonOne.setStyle(feature => feature.properties.style)
 })
+*/
+
+document.getElementById('mapOne').src = 'test_nums.html'
+document.getElementById('mapTwo').src = 'test_nums.html'
