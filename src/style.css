@@ -1,4 +1,4 @@
-html, body, #content {
+html, body, #content, .content {
   height: 100%;
   width: 100%;
   margin: 0;
@@ -16,43 +16,82 @@ body {
   align-items: center;
 }
 
-.container {
-  background-color: #fff;
-  height: 700px;
-  width: 1300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.24);
-}
-
-.map-container {
+.content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.map-container:not(:last-child) {
-  margin-right: 100px;
+.maps {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 75px);
 }
 
-.iframe {
-  height: 500px;
-  width: 500px;
+.header {
+  height: 75px;
+  background-color: #272e2e;
+  color: #d1d8d8;
+  border-bottom: 1px solid #111;
+  font-size: 25px;
+  position: relative;
+  width: 100%;
+}
+
+.githubIcon {
+  color: #d1d8d8;
+  cursor: pointer;
+  font-size: 40px;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+}
+
+.githubIcon:hover {
+  color: white;
+}
+
+.title {
+  font-weight: bold;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.mapContainer {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.mapContainer:first-child {
+  border-right: 1px solid #111;
 }
 
 .iframeContainer {
   background-color: #eee;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.iframe {
+  flex-grow: 1;
+}
+
+.icon {
+  text-align: center;
+  width: 25px;
 }
 
 .select {
-  border-radius: 5px;
-  color: white;
+  color: #d1d8d8;
   font-size: 20px;
-  line-height: 40px;
-  height: 40px;
+  line-height: 50px;
+  height: 50px;
+  width: 100%;
   position: relative;
-  width: 500px;
 }
 
 .selectButton {
@@ -60,11 +99,12 @@ body {
   cursor: pointer;
   display: flex;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 25px;
 }
 
 .selectButton:hover {
   background-color: #566565;
+  color: white;
 }
 
 .dropdown {
@@ -81,7 +121,7 @@ body {
   align-items: center;
   background-color: white;
   color: #374040;
-  padding: 0 20px;
+  padding: 0 25px;
 }
 
 .option:hover {

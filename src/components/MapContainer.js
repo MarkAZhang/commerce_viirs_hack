@@ -11,7 +11,7 @@ class MapContainer extends Component {
 
   render() {
     return (
-      <div className="map-container">
+      <div className="mapContainer">
         <Select val={this.props.src} onChange={this.props.setSrc} />
         <Map src={this.props.src} />
       </div>

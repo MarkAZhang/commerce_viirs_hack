@@ -11,8 +11,23 @@ const OPTIONS = [
   },
   {
     value: 'chi_light.html',
-    label: 'Chicago - Mean Nighttime Brightnesss',
+    label: 'Chicago - Mean Nighttime Brightness',
     icon: 'lightbulb-o'
+  },
+  {
+    value: 'chi_density.html',
+    label: 'Chicago - Population Density',
+    icon: 'users'
+  },
+  {
+    value: 'chi_pred.html',
+    label: 'Chicago - Permit Future Prediction',
+    icon: 'line-chart'
+  },
+  {
+    value: 'chi_pred_cross.html',
+    label: 'Chicago - Permit Cross Prediction',
+    icon: 'random'
   },
   {
     value: 'nyc_build.html',
@@ -24,6 +39,21 @@ const OPTIONS = [
     label: 'NYC - Mean Nighttime Brightness',
     icon: 'lightbulb-o'
   },
+  {
+    value: 'nyc_density.html',
+    label: 'NYC - Population Density',
+    icon: 'users'
+  },
+  {
+    value: 'nyc_pred.html',
+    label: 'NYC - Permit Future Prediction',
+    icon: 'line-chart'
+  },
+  {
+    value: 'nyc_pred_cross.html',
+    label: 'NYC - Permit Cross Prediction',
+    icon: 'random'
+  },
 ]
 
 const getLabelForValue = value => find(matchesProperty('value', value), OPTIONS).label
@@ -32,7 +62,9 @@ const getIconForValue = value => find(matchesProperty('value', value), OPTIONS).
 const Dropdown = props =>
   <div className="select">
     <div className="selectButton" onClick={() => props.setOpen(!props.open)}>
-      <FontAwesome name={getIconForValue(props.val)} />
+      <div className="icon">
+        <FontAwesome name={getIconForValue(props.val)} />
+      </div>
       <div className="label">{getLabelForValue(props.val)}</div>
       <FontAwesome name={props.open ? 'angle-up' : 'angle-down'} />
     </div>
@@ -43,7 +75,9 @@ const Dropdown = props =>
             props.onChange(option.value);
             props.setOpen(false);
           }}>
-            <FontAwesome name={option.icon} />
+            <div className="icon">
+              <FontAwesome name={option.icon} />
+            </div>
             <div className="label">{option.label}</div>
           </div>
         )}
