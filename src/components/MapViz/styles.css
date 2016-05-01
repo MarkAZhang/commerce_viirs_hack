@@ -1,0 +1,17 @@
+.mapContainer {
+  flex-grow: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.iframeContainer {
+  background-color: #eee;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.iframe {
+  flex-grow: 1;
+}

@@ -1,9 +1,18 @@
 import {Component, PropTypes} from 'react'
 import {withState} from 'recompose'
-import Map from './Map'
-import Select from './Select'
+import Select from '~/components/Select'
+import cs from './styles'
 
-class MapContainer extends Component {
+const Map = props =>
+  <div className={cs.iframeContainer}>
+    <iframe className={cs.iframe} src={props.src} frameBorder="0"></iframe>
+  </div>
+
+Map.propTypes = {
+  src: PropTypes.string.isRequired,
+}
+
+class MapViz extends Component {
   static propTypes = {
     initialSrc: PropTypes.string,
   }
@@ -20,7 +29,7 @@ class MapContainer extends Component {
 
   render() {
     return (
-      <div className="mapContainer">
+      <div className={cs.mapContainer}>
         <Select val={this.state.src} onChange={val => this.setState({src: val})} />
         <Map src={this.state.src} />
       </div>
@@ -28,4 +37,4 @@ class MapContainer extends Component {
   }
 }
 
-export default MapContainer
+export default MapViz

@@ -1,0 +1,52 @@
+.select {
+  color: #d1d8d8;
+  font-size: 20px;
+  line-height: 50px;
+  height: 50px;
+  width: 100%;
+  position: relative;
+}
+
+.selectButton {
+  background-color: #374040;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.selectButton:hover {
+  background-color: #566565;
+  color: white;
+}
+
+.dropdown {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.24);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+}
+
+.option {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: #374040;
+  padding: 0 25px;
+}
+
+.option:hover {
+  background-color: #eee;
+}
+
+.label {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.icon {
+  text-align: center;
+  width: 25px;
+}

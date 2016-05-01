@@ -1,8 +1,8 @@
 import Main from './components/Main'
 import {render} from 'react-dom'
-import './style.css'
+import './index.css'
 
-const rootElement = document.getElementById('content')
+const rootElement = document.body
 
 // Render it
 render(<Main />, rootElement)

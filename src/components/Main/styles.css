@@ -1,0 +1,44 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.header {
+  height: 75px;
+  background-color: #272e2e;
+  color: #d1d8d8;
+  border-bottom: 1px solid #111;
+  font-size: 25px;
+  position: relative;
+  width: 100%;
+}
+
+.title {
+  font-weight: bold;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+.maps {
+  display: flex;
+  width: 100%;
+  height: calc(100% - 75px);
+}
+
+.githubIcon {
+  color: #d1d8d8;
+  cursor: pointer;
+  font-size: 40px;
+  position: absolute;
+  right: 25px;
+  top: 20px;
+
+  &:hover {
+    color: white;
+  }
+}
