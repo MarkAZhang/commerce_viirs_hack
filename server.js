@@ -10,7 +10,7 @@ const app = express()
 
 const compiler = webpack(config)
 // Recompile files on source change
-app.use(dev(compiler, {noInfo: true}))
+app.use(dev(compiler, {}))
 
 const INDEX_PAGE = path.resolve(__dirname, 'index.html')
 app.get('/', function(req, res) {

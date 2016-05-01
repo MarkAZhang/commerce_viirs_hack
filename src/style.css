@@ -46,10 +46,10 @@ body {
   position: absolute;
   right: 25px;
   top: 20px;
-}
 
-.githubIcon:hover {
-  color: white;
+  &:hover {
+    color: white;
+  }
 }
 
 .title {

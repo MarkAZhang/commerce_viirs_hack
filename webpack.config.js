@@ -16,12 +16,20 @@ module.exports = {
           },
           {
             test: /\.css$/,
-            loader: 'style-loader!css-loader',
+            loader: 'style-loader!css-loader!postcss-loader',
           },
           {
             test: /\.(ttf|eot|png|jpg|gif|svg|woff2?)/,
             loader: 'url?limit=5000',
           },
         ]
+    },
+    postcss: function () {
+      return [
+        require('precss'),
+        require('autoprefixer')({
+          browsers: ['Firefox >= 31', 'last 2 Chrome versions'],
+        }),
+      ]
     }
 };
