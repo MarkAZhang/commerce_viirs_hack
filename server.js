@@ -1,9 +1,16 @@
 #! /usr/bin/env node
 const express = require('express')
+const webpack = require('webpack')
+const dev = require('webpack-dev-middleware')
 const path = require('path')
 const settings = require('./config')
+const config = require('./webpack.config')
 
 const app = express()
+
+const compiler = webpack(config)
+// Recompile files on source change
+app.use(dev(compiler, {noInfo: true}))
 
 const INDEX_PAGE = path.resolve(__dirname, 'index.html')
 app.get('/', function(req, res) {
