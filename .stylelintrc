@@ -1,0 +1,15 @@
+{
+  extends: 'stylelint-config-standard',
+  rules: {
+    'color-hex-case': 'lower',
+    'font-family-name-quotes': 'single-unless-keyword',
+    'function-url-quotes': 'single',
+    'selector-no-id': true,
+    'string-quotes': 'single',
+    'value-no-vendor-prefix': true,
+    'at-rule-empty-line-before': ['always', {
+      except: ['blockless-group', 'all-nested'],
+      ignore: ['after-comment'],
+    }],
+  },
+}

@@ -1,11 +1,10 @@
 import {Component, PropTypes} from 'react'
-import {withState} from 'recompose'
 import Select from '~/components/Select'
 import cs from './styles'
 
 const Map = props =>
   <div className={cs.iframeContainer}>
-    <iframe className={cs.iframe} src={props.src} frameBorder="0"></iframe>
+    <iframe className={cs.iframe} src={props.src} frameBorder='0'></iframe>
   </div>
 
 Map.propTypes = {
@@ -18,7 +17,7 @@ class MapViz extends Component {
   }
 
   state = {
-    src: ''
+    src: '',
   }
 
   componentWillMount() {

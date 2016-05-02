@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "NODE_ENV=development ./server.js",
-    "build": "NODE_ENV=production webpack"
+    "build": "NODE_ENV=production webpack",
+    "lint:js": "eslint src",
+    "lint:css": "stylelint src/**.css"
   },
   "repository": {
     "type": "git",
@@ -32,6 +34,7 @@
     "autoprefixer": "^6.3.6",
     "babel-cli": "^6.7.7",
     "babel-core": "^6.7.7",
+    "babel-eslint": "^6.0.4",
     "babel-loader": "^6.2.4",
     "babel-plugin-react-require": "^2.1.0",
     "babel-plugin-root-import": "^0.1.0",
@@ -42,11 +45,19 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-root-import": "^3.2.2",
     "css-loader": "^0.23.1",
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb": "^8.0.0",
+    "eslint-plugin-babel": "^3.2.0",
+    "eslint-plugin-import": "^1.6.1",
+    "eslint-plugin-jsx-a11y": "^1.0.4",
+    "eslint-plugin-react": "^5.0.1",
     "express": "^4.13.4",
     "file-loader": "^0.8.5",
     "postcss-loader": "^0.9.1",
     "precss": "^1.4.0",
     "style-loader": "^0.13.1",
+    "stylelint": "^6.2.2",
+    "stylelint-config-standard": "^6.0.0",
     "url-loader": "^0.5.7",
     "webpack": "^2.1.0-beta.2",
     "webpack-dev-middleware": "^1.6.1"

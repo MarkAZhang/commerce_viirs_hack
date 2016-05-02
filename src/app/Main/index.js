@@ -2,7 +2,7 @@ import FontAwesome from 'react-fontawesome'
 import MapViz from '~/components/MapViz'
 import cs from './styles'
 
-const Main = props =>
+const Main = () =>
   <div className={cs.content}>
     <div className={cs.header}>
       <div className={cs.title}>Using Satellite Data to Estimate Construction Activity</div>
@@ -11,8 +11,8 @@ const Main = props =>
       </a>
     </div>
     <div className={cs.maps}>
-      <MapViz initialSrc='chi_light.html'/>
-      <MapViz initialSrc='chi_build.html'/>
+      <MapViz initialSrc='chi_light.html' />
+      <MapViz initialSrc='chi_build.html' />
     </div>
   </div>
 

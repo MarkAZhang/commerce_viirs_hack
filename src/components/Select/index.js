@@ -20,10 +20,12 @@ const Select = props =>
     {props.open &&
       <div className={cs.dropdown}>
         {OPTIONS.map(option =>
-          <div key={option.value} className={cs.option} onClick={() => {
-            props.onChange(option.value);
-            props.setOpen(false);
-          }}>
+          <div
+            key={option.value} className={cs.option} onClick={() => {
+              props.onChange(option.value)
+              props.setOpen(false)
+            }}
+          >
             <div className={cs.icon}>
               <FontAwesome name={option.icon} />
             </div>
