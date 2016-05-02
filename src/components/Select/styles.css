@@ -13,11 +13,11 @@
   display: flex;
   align-items: center;
   padding: 0 25px;
-}
 
-.selectButton:hover {
-  background-color: #566565;
-  color: white;
+  &:hover {
+    background-color: #566565;
+    color: white;
+  }
 }
 
 .dropdown {
@@ -35,10 +35,10 @@
   background-color: white;
   color: #374040;
   padding: 0 25px;
-}
 
-.option:hover {
-  background-color: #eee;
+  &:hover {
+    background-color: #eee;
+  }
 }
 
 .label {

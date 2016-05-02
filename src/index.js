@@ -1,8 +1,10 @@
-import Main from './components/Main'
+import Main from '~/app/Main'
 import {render} from 'react-dom'
-import './index.css'
+import cs from './index.css'
 
-const rootElement = document.body
+const rootElement = document.createElement('div')
+rootElement.className = cs.page
+document.body.appendChild(rootElement)
 
 // Render it
 render(<Main />, rootElement)

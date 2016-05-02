@@ -1,5 +1,5 @@
-import MapViz from '~/components/MapViz'
 import FontAwesome from 'react-fontawesome'
+import MapViz from '~/components/MapViz'
 import cs from './styles'
 
 const Main = props =>
